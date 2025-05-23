@@ -7,10 +7,12 @@ services:
       - ./:/app
     environment:
       - FLASK_ENV=development
+      - REDIS_PASSWORD=MyBIPMPassword
+      - REDIS_HOST=redis
     depends_on:
       - redis
-
   redis:
     image: redis:alpine
+    command: redis-server --requirepass MyBIPMPassword
     ports:
       - "6379:6379"

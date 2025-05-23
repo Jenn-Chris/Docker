@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BIPM Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('hello') }}">Home</a></li>
+                <li><a href="{{ url_for('titanic') }}">Titanic</a></li>
+                <li><a href="https://github.com/yourusername">About</a></li>
+            </ul>
+        </nav>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <footer>
+            <p>&copy; 2025 Jennifer Christopher | <a href="https://www.hwr-berlin.de/">HWR Berlin</a></p>
+        </footer>
+    </div>
+</body>
+</html>

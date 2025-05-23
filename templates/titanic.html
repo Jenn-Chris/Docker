@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header style="text-align: center; margin-bottom: 3rem;">
+    <h1>🚢 Titanic Dataset Analysis</h1>
+</header>
+
+{% if error %}
+<div style="background: #ff6b6b; color: white; padding: 1rem; border-radius: 5px;">
+    <strong>Error:</strong> {{ error }}
+</div>
+{% else %}
+<section>
+    <h2>📊 Statistics</h2>
+    <p>Total Passengers: {{ total_passengers }}</p>
+    <p>Survived: {{ survived }}</p>
+    <p>Survival Rate: {{ survival_rate }}%</p>
+</section>
+
+{% if chart_url %}
+<section>
+    <h2>Survival Chart</h2>
+    <img src="data:image/png;base64,{{ chart_url }}" alt="Chart">
+</section>
+{% endif %}
+
+<section>
+    <h2>First 5 Passengers</h2>
+    {{ table_html|safe }}
+</section>
+{% endif %}
+{% endblock %}
