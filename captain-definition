@@ -1,0 +1,12 @@
+  UW PICO 5.09                        File: captain-definition                           
+
+
+
+
+
+
+
+{
+    "schemaVersion": 2,
+    "dockerfilePath": "./dockerfile"
+}   
