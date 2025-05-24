@@ -10,3 +10,9 @@
     "schemaVersion": 2,
     "dockerfilePath": "./dockerfile"
 }   
+
+{
+    "schemaVersion": 2,
+    "dockerfilePath": "./Dockerfile"
+}
+
